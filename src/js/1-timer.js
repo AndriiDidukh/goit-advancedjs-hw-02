@@ -1,4 +1,5 @@
 import flatpickr from 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 
 const startButton = document.querySelector('[data-start]');
@@ -49,7 +50,7 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-const flatpickrObj = flatpickr(inputData, options);
+flatpickr(inputData, options);
 
 function onClickButton() {
   clearInterval(timerId);
